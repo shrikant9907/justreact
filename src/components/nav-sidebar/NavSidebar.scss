@@ -1,0 +1,14 @@
+$bgColor: #ffffff;
+$linkColor: #000000;
+$iconColor: red;
+
+.app-sidebar {
+  background-color: $bgColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  max-width: 240px;
+  width: 240px;
+  display: flex;
+}

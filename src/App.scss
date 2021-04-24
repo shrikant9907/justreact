@@ -1,3 +1,27 @@
+$bodyBg: #ffffff;
+$themeTextColor: #434343;
+$themeBgColor: #efefef;
+$sidebarWidth: 240px;
+
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  outline: unset !important;
+}
+
+body {
+  margin: 0px !important;
+  padding: 0px !important;
+  background-color: $bodyBg;
+}
+
 .react-app {
-  color: red;
+  position: fixed;
+  color: $themeTextColor;
+  background-color: $themeBgColor;
+  height: 100vh;
+  width: 100vw;
+  padding-left: $sidebarWidth; 
+  overflow-x: hidden;
+  overflow-y: auto;
 }
