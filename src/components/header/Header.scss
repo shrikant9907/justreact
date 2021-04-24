@@ -8,6 +8,10 @@ $primaryColor: #ff5200;
   display: flex;
   border:unset;
   border-radius: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 240px;
   .navbar {
     margin-left: auto;
     .navbar-brand {

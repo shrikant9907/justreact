@@ -2,6 +2,7 @@ $bodyBg: #ffffff;
 $themeTextColor: #434343;
 $themeBgColor: #efefef;
 $sidebarWidth: 240px;
+$primaryColor: #ff5200;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -25,12 +26,17 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   .app-content {
-    padding: 50px 30px;  
+    padding: 76px 30px 50px;;  
+    .page-title {
+      font-size: 30px;
+      font-weight: bold;
+      color: $primaryColor;
+    }
     @media all and (max-width: 1400px) {
-      padding: 50px 20px;  
+      padding: 76px 20px;  
     }
     @media all and (max-width: 1024px) {
-      padding: 50px 16px 30px;  
+      padding: 76px 16px 30px;  
     }
   }
 }
