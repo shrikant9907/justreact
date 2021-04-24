@@ -6,7 +6,7 @@ import Features from './layouts/features/Features';
 import NavSidebar from './components/nav-sidebar/NavSidebar';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-
+        
 function App() {
   return (
     <BrowserRouter>
@@ -14,7 +14,7 @@ function App() {
         <NavSidebar />
         <Header />
         <div className="app-content">
-          <Switch>
+         <Switch>
             <Route exact path="/">
               <Home />
             </Route>

@@ -1,6 +1,9 @@
 import './NavSidebar.scss';
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollarSign, faHome, faStar } from '@fortawesome/free-solid-svg-icons';
+
 
 export default class NavSidebar extends Component {
   render() {
@@ -17,16 +20,25 @@ export default class NavSidebar extends Component {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/">
+                    <span className="nav-icon">
+                      <FontAwesomeIcon icon={faHome} />
+                    </span> 
                     Home
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/features">
+                    <span className="nav-icon">
+                      <FontAwesomeIcon icon={faStar} />
+                    </span>
                     Features
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/pricing">
+                    <span className="nav-icon">
+                      <FontAwesomeIcon icon={faDollarSign} />
+                    </span>
                     Pricing
                   </NavLink>
                 </li>

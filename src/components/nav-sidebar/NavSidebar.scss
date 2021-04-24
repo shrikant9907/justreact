@@ -22,6 +22,7 @@ $primaryColor: #ff5200;
       font-weight: bold;
       text-transform: uppercase;
       color: $primaryColor;
+      margin-bottom: 10px;
     }
     .navbar-collapse {
       flex-direction: column;
@@ -34,8 +35,20 @@ $primaryColor: #ff5200;
         .nav-item {
           .nav-link {
             color: $linkColor;
+            padding: 12px;
             &:hover {
               background-color: rgba(0,0,0,0.02);
+            }
+            .nav-icon {
+              width: 20px;
+              display: inline-block;
+              text-align: center;
+              margin-right: 10px;
+              color: $primaryColor;
+              svg,
+              i {
+                font-size: 18px;
+              }
             }
           }
         }
