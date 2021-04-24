@@ -4,16 +4,17 @@ import './App.scss';
 import Home from './layouts/home/Home';
 import Features from './layouts/features/Features';
 import NavSidebar from './components/nav-sidebar/NavSidebar';
-
-const appName = process.env.REACT_APP_NAME;
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="react-app">
       <NavSidebar />
+      <Header />
+      <Footer />
       <div className="app-content">
-        {appName}
         <Switch>
           <Route exact path="/">
             <Home />

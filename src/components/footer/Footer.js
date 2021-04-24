@@ -1,8 +1,8 @@
-import './NavSidebar.scss';
+import './Footer.scss';
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 
-export default class NavSidebar extends Component {
+export default class Footer extends Component {
   render() {
     return (
         <div className="card app-sidebar">
@@ -31,12 +31,12 @@ export default class NavSidebar extends Component {
                   </NavLink>
                 </li>
               </ul>
-              {/* <NavLink className="btn btn-outline-info" to="/login">
+              <NavLink className="btn btn-outline-info" to="/login">
                 Login
               </NavLink>
               <NavLink className="btn btn-outline-info" to="/register">
                 Register
-              </NavLink> */}
+              </NavLink>
             </div>
           </nav>
         </div>
