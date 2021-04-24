@@ -1,14 +1,27 @@
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import './App.scss';
+import Home from './layouts/home/Home';
+import Features from './layouts/features/Features';
 import NavSidebar from './components/nav-sidebar/NavSidebar';
 
 function App() {
-  const appEnv = process.env.REACT_APP_ENV;
   return (
-    <div className="react-app">
-        <NavSidebar />
-        React Project Initial Setup
-        <div className="version">{appEnv}</div>
-    </div>
+    <BrowserRouter>
+      <div className="react-app">
+      <NavSidebar />
+      <div className="app-content">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/features">
+            <Features />
+          </Route>
+        </Switch>
+      </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

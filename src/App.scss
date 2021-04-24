@@ -24,4 +24,13 @@ body {
   padding-left: $sidebarWidth; 
   overflow-x: hidden;
   overflow-y: auto;
+  .app-content {
+    padding: 50px 30px;  
+    @media all and (max-width: 1400px) {
+      padding: 50px 20px;  
+    }
+    @media all and (max-width: 1024px) {
+      padding: 50px 16px 30px;  
+    }
+  }
 }

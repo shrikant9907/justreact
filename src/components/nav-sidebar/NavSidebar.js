@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 export default class NavSidebar extends Component {
   render() {
     return (
-      <div>
         <div className="card app-sidebar">
           <nav className="navbar navbar-expand-lg">
             <NavLink className="navbar-brand" to="/">
@@ -17,7 +16,7 @@ export default class NavSidebar extends Component {
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/home">
+                  <NavLink className="nav-link" to="/">
                     Home
                   </NavLink>
                 </li>
@@ -41,7 +40,6 @@ export default class NavSidebar extends Component {
             </div>
           </nav>
         </div>
-      </div>
     )
   }
 }
