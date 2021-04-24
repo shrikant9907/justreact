@@ -26,17 +26,17 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   .app-content {
-    padding: 76px 30px 50px;;  
+    padding: 56px 30px 50px;;  
     .page-title {
       font-size: 30px;
       font-weight: bold;
       color: $primaryColor;
     }
     @media all and (max-width: 1400px) {
-      padding: 76px 20px;  
+      padding: 56px 20px;  
     }
     @media all and (max-width: 1024px) {
-      padding: 76px 16px 30px;  
+      padding: 56px 16px 30px;  
     }
   }
 }
