@@ -26,7 +26,8 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   .app-content {
-    padding: 56px 30px 50px;;  
+    padding: 56px 30px 50px;
+    min-height: calc(100vh - 51px);  
     .page-title {
       font-size: 30px;
       font-weight: bold;

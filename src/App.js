@@ -11,19 +11,19 @@ function App() {
   return (
     <BrowserRouter>
       <div className="react-app">
-      <NavSidebar />
-      <Header />
-      <Footer />
-      <div className="app-content">
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/features">
-            <Features />
-          </Route>
-        </Switch>
-      </div>
+        <NavSidebar />
+        <Header />
+        <div className="app-content">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/features">
+              <Features />
+            </Route>
+          </Switch>
+        </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );
