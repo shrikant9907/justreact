@@ -40,5 +40,31 @@ body {
     @media all and (max-width: 1024px) {
       padding: 56px 16px 30px;  
     }
+    .btn {
+      border-radius: 25px;
+      max-width: 100%;
+      min-width: 100px;
+      margin: 0 auto 16px;
+    }
+    .seperator {
+      &.s50 {
+        height: 50px;
+      }
+      &.s40 {
+        height: 40px;
+      }
+      &.s30 {
+        height: 30px;
+      }
+      &.s20 {
+        height: 20px;
+      }
+      &.s10 {
+        height: 10px;
+      }
+      &.s5 {
+        height: 5px;
+      }
+    }
   }
 }
