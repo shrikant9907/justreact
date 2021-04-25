@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-
-import Swiper from 'react-id-swiper';
-import 'swiper/swiper.scss';
-import './Carousel.scss';
 import { Card } from 'react-bootstrap';  
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import 'swiper/swiper.scss';
+
+import './Carousel.scss';
 
 import imgSrc from "../../_assets/images/banner/banner.jpg";
 
 export default class Carousel extends Component {
     render() {
+
+      SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+
       const params = {
         spaceBetween: 10,
+        slidesPerGroup:1,
         effect: 'fade',
+        observer:true,
+        observeParents:true,
         autoplay: {
-          delay: 500,
+          delay: 3000,
           disableOnInteraction: false
         },
         pagination: {
@@ -42,74 +50,99 @@ export default class Carousel extends Component {
       }
       return (
         <>
-            <Swiper {...params}>
-                <Card>
-                  <div className="card-img-box">
-                    <Card.Img variant="top" src={imgSrc} />
-                  </div>
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk
-                      of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card>
-                  <div className="card-img-box">
-                    <Card.Img variant="top" src={imgSrc} />
-                  </div>
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk
-                      of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card>
-                  <div className="card-img-box">
-                    <Card.Img variant="top" src={imgSrc} />
-                  </div>
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk
-                      of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card>
-                  <div className="card-img-box">
-                    <Card.Img variant="top" src={imgSrc} />
-                  </div>
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk
-                      of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card>
-                  <div className="card-img-box">
-                    <Card.Img variant="top" src={imgSrc} />
-                  </div>
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk
-                      of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card>
-                  <div className="card-img-box">
-                    <Card.Img variant="top" src={imgSrc} />
-                  </div>
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk
-                      of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Swiper>
+          <Swiper {...params}>
+            <SwiperSlide>
+              <Card>
+                <div className="card-img-box">
+                  <Card.Img variant="top" src={imgSrc} />
+                </div>
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card>
+                <div className="card-img-box">
+                  <Card.Img variant="top" src={imgSrc} />
+                </div>
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card>
+                <div className="card-img-box">
+                  <Card.Img variant="top" src={imgSrc} />
+                </div>
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card>
+                <div className="card-img-box">
+                  <Card.Img variant="top" src={imgSrc} />
+                </div>
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card>
+                <div className="card-img-box">
+                  <Card.Img variant="top" src={imgSrc} />
+                </div>
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card>
+                <div className="card-img-box">
+                  <Card.Img variant="top" src={imgSrc} />
+                </div>
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card>
+                <div className="card-img-box">
+                  <Card.Img variant="top" src={imgSrc} />
+                </div>
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </SwiperSlide>
+          </Swiper>
         </>
       )
     }
