@@ -27,11 +27,11 @@ export default class NavSidebar extends Component {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/features">
+                  <NavLink className="nav-link" to="/gallery">
                     <span className="nav-icon">
                       <FontAwesomeIcon icon={faStar} />
                     </span>
-                    Features
+                    Gallery
                   </NavLink>
                 </li>
                 <li className="nav-item">
