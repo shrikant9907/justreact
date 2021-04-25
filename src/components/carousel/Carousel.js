@@ -9,11 +9,11 @@ import './Carousel.scss';
 
 import imgSrc from "../../_assets/images/banner/banner.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default class Carousel extends Component {
-    render() {
 
+    render() {
+      const { heading, hicon, items, type, loading } = this.props;
       SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
       const params = {
@@ -56,99 +56,45 @@ export default class Carousel extends Component {
       return (
         <>
           <div className="carousel-slider">
-          <h2 class="section-heading"><span className="heading-icon"><FontAwesomeIcon icon={faStar} /></span> Slider Title</h2>
+            { heading ? 
+              <h2 className="section-heading">
+                {hicon ? 
+                  <span className="heading-icon"><FontAwesomeIcon icon={hicon} /></span>
+                : ''}
+                {heading}
+                </h2>
+              : ''}
           <Swiper {...params}>
-            <SwiperSlide>
-              <Card>
-                <div className="card-img-box">
-                  <Card.Img variant="top" src={imgSrc} />
-                </div>
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card>
-                <div className="card-img-box">
-                  <Card.Img variant="top" src={imgSrc} />
-                </div>
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card>
-                <div className="card-img-box">
-                  <Card.Img variant="top" src={imgSrc} />
-                </div>
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card>
-                <div className="card-img-box">
-                  <Card.Img variant="top" src={imgSrc} />
-                </div>
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card>
-                <div className="card-img-box">
-                  <Card.Img variant="top" src={imgSrc} />
-                </div>
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card>
-                <div className="card-img-box">
-                  <Card.Img variant="top" src={imgSrc} />
-                </div>
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card>
-                <div className="card-img-box">
-                  <Card.Img variant="top" src={imgSrc} />
-                </div>
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </SwiperSlide>
+            {
+              items ? 
+              items.map((item, i) => {
+              return (
+                <SwiperSlide>
+                  { type === 'userlist' ? 
+                    <Card className="user-card">
+                      <Card.Body>
+                        <Card.Title>{ item.name }</Card.Title>
+                        <Card.Text>{item.email ? item.email : ''}</Card.Text>
+                      </Card.Body>
+                    </Card>
+                  : 
+                  <Card>
+                    <div className="card-img-box">
+                      <Card.Img variant="top" src={imgSrc} />
+                    </div>
+                    <Card.Body>
+                      <Card.Text>
+                        Some quick example text to build on the card title an
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                  }    
+                </SwiperSlide>
+              );
+            }) 
+            : 
+              loading ? 'Loading ...' : 'Items not found.'
+            }
           </Swiper>
           </div>
         </>
