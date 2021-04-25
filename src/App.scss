@@ -46,6 +46,23 @@ body {
       min-width: 100px;
       margin: 0 auto 16px;
     }
+    .app-section {
+      margin-bottom: 50px;
+      .section-heading {
+        font-size: 24px;
+        margin-bottom: 20px;
+        .heading-icon {
+            width: 24px;
+            margin-right: 5px;
+            color: $primaryColor;
+            svg,
+            i,
+            img {
+                line-height: 24px;
+            }
+        }
+      }
+    }
     .seperator {
       &.s50 {
         height: 50px;

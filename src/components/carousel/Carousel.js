@@ -8,6 +8,8 @@ import 'swiper/swiper.scss';
 import './Carousel.scss';
 
 import imgSrc from "../../_assets/images/banner/banner.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default class Carousel extends Component {
     render() {
@@ -33,8 +35,11 @@ export default class Carousel extends Component {
           prevEl: '.swiper-button-prev'
         },
         breakpoints: {
+          1920: {
+            slidesPerView: 6,
+          },
           1366: {
-            slidesPerView: 2,
+            slidesPerView: 4,
           },
           768: {
             slidesPerView: 3,
@@ -50,6 +55,8 @@ export default class Carousel extends Component {
       }
       return (
         <>
+          <div className="carousel-slider">
+          <h2 class="section-heading"><span className="heading-icon"><FontAwesomeIcon icon={faStar} /></span> Slider Title</h2>
           <Swiper {...params}>
             <SwiperSlide>
               <Card>
@@ -143,6 +150,7 @@ export default class Carousel extends Component {
               </Card>
             </SwiperSlide>
           </Swiper>
+          </div>
         </>
       )
     }
